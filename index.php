@@ -1,3 +1,7 @@
+<?php
+    include_once 'includes/tabla.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,18 +26,22 @@
 	<!-- Font Awesome icons -->
 	<script src="https://kit.fontawesome.com/d0207fe0f1.js" crossorigin="anonymous"></script>
 
+    
+
 </head>
 
-<body class="bg-light">
+<body class="bg-light" onload="actualizarValores()">
     
-    <div class="container pt-4 mb-5">
+    <div class="container pt-4">
         
         <div class="p-3">
             <h2 class="display-4"><strong>JSON example</strong></h2>
-            <h2 class="display-6">Extract and show on html data from a JSON file</h2>
+            <h2 class="display-6">Extract and show data on html from a JSON file</h2>
         </div>
+
+
         
-        <div class="card py-3">
+        <div class="card py-3 mb-5">
             <table class="table text-center" style="width: 90%; margin: auto;">
                 <!-- Heading -->
                 <thead>
@@ -66,216 +74,216 @@
                     <tr>
                         <th scope="row">1</th>
                         <!-- Equipo -->
-                        <td><strong>La Raza</strong></td>
+                        <td><strong id="eq1">Equipo 1</strong></td>
                         <!-- Partidos -->
-                        <td class="border-start">2</td> <!-- PJ -->
-                        <td>2</td> <!-- PG -->
-                        <td>0</td> <!-- PE -->
-                        <td class="border-end">0</td> <!-- PP -->
+                        <td class="border-start">-</td> <!-- PJ -->
+                        <td>-</td> <!-- PG -->
+                        <td>-</td> <!-- PE -->
+                        <td class="border-end">-</td> <!-- PP -->
                         <!-- Goles -->
-                        <td class="d-none d-sm-table-cell">11</td> <!-- GF -->
-                        <td class="d-none d-sm-table-cell">1</td> <!-- GC -->
-                        <td class="d-none d-sm-table-cell border-end">10</td> <!-- DG -->
+                        <td class="d-none d-sm-table-cell">-</td> <!-- GF -->
+                        <td class="d-none d-sm-table-cell">-</td> <!-- GC -->
+                        <td class="d-none d-sm-table-cell border-end">-</td> <!-- DG -->
                         <!-- Puntos -->
-                        <td>6</td>
+                        <td>-</td>
                     </tr>
                     
                     <!-- 2º Lugar -->
                     <tr>
                         <th scope="row">2</th>
                         <!-- Equipo -->
-                        <td><strong>Close Friends F.C.</strong></td>
+                        <td><strong>Equipo 2</strong></td>
                         <!-- Partidos -->
-                        <td class="border-start">2</td> <!-- PJ -->
-                        <td>2</td> <!-- PG -->
-                        <td>0</td> <!-- PE -->
-                        <td class="border-end">0</td> <!-- PP -->
+                        <td class="border-start">-</td> <!-- PJ -->
+                        <td>-</td> <!-- PG -->
+                        <td>-</td> <!-- PE -->
+                        <td class="border-end">-</td> <!-- PP -->
                         <!-- Goles -->
-                        <td class="d-none d-sm-table-cell">8</td> <!-- GF -->
-                        <td class="d-none d-sm-table-cell">3</td> <!-- GC -->
-                        <td class="d-none d-sm-table-cell border-end">5</td> <!-- DG -->
+                        <td class="d-none d-sm-table-cell">-</td> <!-- GF -->
+                        <td class="d-none d-sm-table-cell">-</td> <!-- GC -->
+                        <td class="d-none d-sm-table-cell border-end">-</td> <!-- DG -->
                         <!-- Puntos -->
-                        <td>6</td>
+                        <td>-</td>
                     </tr>
                     
                     <!-- 3º Lugar -->
                     <tr>
                         <th scope="row">3</th>
                         <!-- Equipo -->
-                        <td><strong>Leyendas</strong></td>
+                        <td><strong>Equipo 3</strong></td>
                         <!-- Partidos -->
-                        <td class="border-start">2</td> <!-- PJ -->
-                        <td>2</td> <!-- PG -->
-                        <td>0</td> <!-- PE -->
-                        <td class="border-end">0</td> <!-- PP -->
+                        <td class="border-start">-</td> <!-- PJ -->
+                        <td>-</td> <!-- PG -->
+                        <td>-</td> <!-- PE -->
+                        <td class="border-end">-</td> <!-- PP -->
                         <!-- Goles -->
-                        <td class="d-none d-sm-table-cell">6</td> <!-- GF -->
-                        <td class="d-none d-sm-table-cell">2</td> <!-- GC -->
-                        <td class="d-none d-sm-table-cell border-end">4</td> <!-- DG -->
+                        <td class="d-none d-sm-table-cell">-</td> <!-- GF -->
+                        <td class="d-none d-sm-table-cell">-</td> <!-- GC -->
+                        <td class="d-none d-sm-table-cell border-end">-</td> <!-- DG -->
                         <!-- Puntos -->
-                        <td>6</td>
+                        <td>-</td>
                     </tr>
                     
                     <!-- 4º Lugar -->
                     <tr>
                         <th scope="row">4</th>
                         <!-- Equipo -->
-                        <td><strong>Gol Osos</strong></td>
+                        <td><strong>Equipo 4</strong></td>
                         <!-- Partidos -->
-                        <td class="border-start">2</td> <!-- PJ -->
-                        <td>2</td> <!-- PG -->
-                        <td>0</td> <!-- PE -->
-                        <td class="border-end">1</td> <!-- PP -->
+                        <td class="border-start">-</td> <!-- PJ -->
+                        <td>-</td> <!-- PG -->
+                        <td>-</td> <!-- PE -->
+                        <td class="border-end">-</td> <!-- PP -->
                         <!-- Goles -->
-                        <td class="d-none d-sm-table-cell">6</td> <!-- GF -->
-                        <td class="d-none d-sm-table-cell">3</td> <!-- GC -->
-                        <td class="d-none d-sm-table-cell border-end">3</td> <!-- DG -->
+                        <td class="d-none d-sm-table-cell">-</td> <!-- GF -->
+                        <td class="d-none d-sm-table-cell">-</td> <!-- GC -->
+                        <td class="d-none d-sm-table-cell border-end">-</td> <!-- DG -->
                         <!-- Puntos -->
-                        <td>3</td>
+                        <td>-</td>
                     </tr>
                     
                     <!-- 5º Lugar -->
                     <tr>
                         <th scope="row">5</th>
                         <!-- Equipo -->
-                        <td><strong>Stacy F.C.</strong></td>
+                        <td><strong>Equipo 5</strong></td>
                         <!-- Partidos -->
-                        <td class="border-start">2</td> <!-- PJ -->
-                        <td>1</td> <!-- PG -->
-                        <td>0</td> <!-- PE -->
-                        <td class="border-end">1</td> <!-- PP -->
+                        <td class="border-start">-</td> <!-- PJ -->
+                        <td>-</td> <!-- PG -->
+                        <td>-</td> <!-- PE -->
+                        <td class="border-end">-</td> <!-- PP -->
                         <!-- Goles -->
-                        <td class="d-none d-sm-table-cell">8</td> <!-- GF -->
-                        <td class="d-none d-sm-table-cell">5</td> <!-- GC -->
-                        <td class="d-none d-sm-table-cell border-end">3</td> <!-- DG -->
+                        <td class="d-none d-sm-table-cell">-</td> <!-- GF -->
+                        <td class="d-none d-sm-table-cell">-</td> <!-- GC -->
+                        <td class="d-none d-sm-table-cell border-end">-</td> <!-- DG -->
                         <!-- Puntos -->
-                        <td>3</td>
+                        <td>-</td>
                     </tr>
                     
                     <!-- 6º Lugar -->
                     <tr>
                         <th scope="row">6</th>
                         <!-- Equipo -->
-                        <td><strong>Cerounos F.C.</strong></td>
+                        <td><strong>Equipo 6</strong></td>
                         <!-- Partidos -->
-                        <td class="border-start">2</td> <!-- PJ -->
-                        <td>1</td> <!-- PG -->
-                        <td>0</td> <!-- PE -->
-                        <td class="border-end">1</td> <!-- PP -->
+                        <td class="border-start">-</td> <!-- PJ -->
+                        <td>-</td> <!-- PG -->
+                        <td>-</td> <!-- PE -->
+                        <td class="border-end">-</td> <!-- PP -->
                         <!-- Goles -->
-                        <td class="d-none d-sm-table-cell">5</td> <!-- GF -->
-                        <td class="d-none d-sm-table-cell">3</td> <!-- GC -->
-                        <td class="d-none d-sm-table-cell border-end">2</td> <!-- DG -->
+                        <td class="d-none d-sm-table-cell">-</td> <!-- GF -->
+                        <td class="d-none d-sm-table-cell">-</td> <!-- GC -->
+                        <td class="d-none d-sm-table-cell border-end">-</td> <!-- DG -->
                         <!-- Puntos -->
-                        <td>3</td>
+                        <td>-</td>
                     </tr>
                     
                     <!-- 7º Lugar -->
                     <tr>
                         <th scope="row">7</th>
                         <!-- Equipo -->
-                        <td><strong>Galácticos</strong></td>
+                        <td><strong>Equipo 7</strong></td>
                         <!-- Partidos -->
-                        <td class="border-start">2</td> <!-- PJ -->
-                        <td>1</td> <!-- PG -->
-                        <td>0</td> <!-- PE -->
-                        <td class="border-end">1</td> <!-- PP -->
+                        <td class="border-start">-</td> <!-- PJ -->
+                        <td>-</td> <!-- PG -->
+                        <td>-</td> <!-- PE -->
+                        <td class="border-end">-</td> <!-- PP -->
                         <!-- Goles -->
-                        <td class="d-none d-sm-table-cell">4</td> <!-- GF -->
-                        <td class="d-none d-sm-table-cell">3</td> <!-- GC -->
-                        <td class="d-none d-sm-table-cell border-end">1</td> <!-- DG -->
+                        <td class="d-none d-sm-table-cell">-</td> <!-- GF -->
+                        <td class="d-none d-sm-table-cell">-</td> <!-- GC -->
+                        <td class="d-none d-sm-table-cell border-end">-</td> <!-- DG -->
                         <!-- Puntos -->
-                        <td>3</td>
+                        <td>-</td>
                     </tr>
                     
                     <!-- 8º Lugar -->
                     <tr>
                         <th scope="row">8</th>
                         <!-- Equipo -->
-                        <td><strong>Leones F.C.</strong></td>
+                        <td><strong>Equipo 8</strong></td>
                         <!-- Partidos -->
-                        <td class="border-start">2</td> <!-- PJ -->
-                        <td>1</td> <!-- PG -->
-                        <td>0</td> <!-- PE -->
-                        <td class="border-end">1</td> <!-- PP -->
+                        <td class="border-start">-</td> <!-- PJ -->
+                        <td>-</td> <!-- PG -->
+                        <td>-</td> <!-- PE -->
+                        <td class="border-end">-</td> <!-- PP -->
                         <!-- Goles -->
-                        <td class="d-none d-sm-table-cell">5</td> <!-- GF -->
-                        <td class="d-none d-sm-table-cell">8</td> <!-- GC -->
-                        <td class="d-none d-sm-table-cell border-end">-3</td> <!-- DG -->
+                        <td class="d-none d-sm-table-cell">-</td> <!-- GF -->
+                        <td class="d-none d-sm-table-cell">-</td> <!-- GC -->
+                        <td class="d-none d-sm-table-cell border-end">-</td> <!-- DG -->
                         <!-- Puntos -->
-                        <td>3</td>
+                        <td>-</td>
                     </tr>
                     
                     <!-- 9º Lugar -->
                     <tr>
                         <th scope="row">9</th>
                         <!-- Equipo -->
-                        <td><strong>Fuente Ovejuna F.C.</strong></td>
+                        <td><strong>Equipo 9</strong></td>
                         <!-- Partidos -->
-                        <td class="border-start">2</td> <!-- PJ -->
-                        <td>0</td> <!-- PG -->
-                        <td>0</td> <!-- PE -->
-                        <td class="border-end">1</td> <!-- PP -->
+                        <td class="border-start">-</td> <!-- PJ -->
+                        <td>-</td> <!-- PG -->
+                        <td>-</td> <!-- PE -->
+                        <td class="border-end">-</td> <!-- PP -->
                         <!-- Goles -->
-                        <td class="d-none d-sm-table-cell">2</td> <!-- GF -->
-                        <td class="d-none d-sm-table-cell">6</td> <!-- GC -->
-                        <td class="d-none d-sm-table-cell border-end">-4</td> <!-- DG -->
+                        <td class="d-none d-sm-table-cell">-</td> <!-- GF -->
+                        <td class="d-none d-sm-table-cell">-</td> <!-- GC -->
+                        <td class="d-none d-sm-table-cell border-end">-</td> <!-- DG -->
                         <!-- Puntos -->
-                        <td>0</td>
+                        <td>-</td>
                     </tr>
                     
                     <!-- 10º Lugar -->
                     <tr>
                         <th scope="row">10</th>
                         <!-- Equipo -->
-                        <td><strong>El Equipe</strong></td>
+                        <td><strong>Equipo 10</strong></td>
                         <!-- Partidos -->
-                        <td class="border-start">2</td> <!-- PJ -->
-                        <td>0</td> <!-- PG -->
-                        <td>0</td> <!-- PE -->
-                        <td class="border-end">2</td> <!-- PP -->
+                        <td class="border-start">-</td> <!-- PJ -->
+                        <td>-</td> <!-- PG -->
+                        <td>-</td> <!-- PE -->
+                        <td class="border-end">-</td> <!-- PP -->
                         <!-- Goles -->
-                        <td class="d-none d-sm-table-cell">2</td> <!-- GF -->
-                        <td class="d-none d-sm-table-cell">6</td> <!-- GC -->
-                        <td class="d-none d-sm-table-cell border-end">-4</td> <!-- DG -->
+                        <td class="d-none d-sm-table-cell">-</td> <!-- GF -->
+                        <td class="d-none d-sm-table-cell">-</td> <!-- GC -->
+                        <td class="d-none d-sm-table-cell border-end">-</td> <!-- DG -->
                         <!-- Puntos -->
-                        <td>0</td>
+                        <td>-</td>
                     </tr>
                     
                     <!-- 11º Lugar -->
                     <tr>
                         <th scope="row">11</th>
                         <!-- Equipo -->
-                        <td><strong>Atlético San Pancho</strong></td>
+                        <td><strong>Equipo 11</strong></td>
                         <!-- Partidos -->
-                        <td class="border-start">2</td> <!-- PJ -->
-                        <td>0</td> <!-- PG -->
-                        <td>0</td> <!-- PE -->
-                        <td class="border-end">2</td> <!-- PP -->
+                        <td class="border-start">-</td> <!-- PJ -->
+                        <td>-</td> <!-- PG -->
+                        <td>-</td> <!-- PE -->
+                        <td class="border-end">-</td> <!-- PP -->
                         <!-- Goles -->
-                        <td class="d-none d-sm-table-cell">3</td> <!-- GF -->
-                        <td class="d-none d-sm-table-cell">10</td> <!-- GC -->
-                        <td class="d-none d-sm-table-cell border-end">-7</td> <!-- DG -->
+                        <td class="d-none d-sm-table-cell">-</td> <!-- GF -->
+                        <td class="d-none d-sm-table-cell">-</td> <!-- GC -->
+                        <td class="d-none d-sm-table-cell border-end">-</td> <!-- DG -->
                         <!-- Puntos -->
-                        <td>0</td>
+                        <td>-</td>
                     </tr>
                     
                     <!-- 12º Lugar -->
                     <tr>
                         <th scope="row">12</th>
                         <!-- Equipo -->
-                        <td><strong>Vikingos F.C.</strong></td>
+                        <td><strong>Equipo 12</strong></td>
                         <!-- Partidos -->
-                        <td class="border-start">2</td> <!-- PJ -->
-                        <td>0</td> <!-- PG -->
-                        <td>0</td> <!-- PE -->
-                        <td class="border-end">2</td> <!-- PP -->
+                        <td class="border-start">-</td> <!-- PJ -->
+                        <td>-</td> <!-- PG -->
+                        <td>-</td> <!-- PE -->
+                        <td class="border-end">-</td> <!-- PP -->
                         <!-- Goles -->
-                        <td class="d-none d-sm-table-cell">2</td> <!-- GF -->
-                        <td class="d-none d-sm-table-cell">12</td> <!-- GC -->
-                        <td class="d-none d-sm-table-cell border-end">-10</td> <!-- DG -->
+                        <td class="d-none d-sm-table-cell">-</td> <!-- GF -->
+                        <td class="d-none d-sm-table-cell">-</td> <!-- GC -->
+                        <td class="d-none d-sm-table-cell border-end">-</td> <!-- DG -->
                         <!-- Puntos -->
-                        <td>0</td>
+                        <td>-</td>
                     </tr>
                     
                 </tbody>
