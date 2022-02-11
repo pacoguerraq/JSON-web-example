@@ -34,6 +34,7 @@
     
     <div class="container pt-4">
         
+        <!-- Titulo y descripcion -->
         <div class="p-3">
             <h2 class="display-4"><strong>mySQL php Example</strong></h2>
             <h2 class="display-6">Extract and show data on html from mySQL database</h2>
@@ -46,7 +47,7 @@
             
             if ($result_check > 0) {
                 while ($row = mysqli_fetch_assoc($result)) {
-                    echo $row['nombre_equipo'];
+                    echo $row['nombre_equipo'] . "<br>";
                 }
             }
         ?>
