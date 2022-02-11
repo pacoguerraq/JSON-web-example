@@ -39,7 +39,17 @@
             <h2 class="display-6">Extract and show data on html from mySQL database</h2>
         </div>
 
-
+        <?php
+            $sql = "SELECT * FROM tabla_general;";
+            $result = mysqli_query($conn, $sql);
+            $result_check = mysqli_num_rows($result);
+            
+            if ($result_check > 0) {
+                while ($row = mysqli_fetch_assoc($result)) {
+                    echo $row['nombre_equipo'];
+                }
+            }
+        ?>
         
         <div class="card py-3 mb-5">
             <table class="table text-center" style="width: 90%; margin: auto;">
