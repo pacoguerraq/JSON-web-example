@@ -6,7 +6,7 @@
 <html lang="en">
 
 <head>
-    <title>JSON example</title>
+    <title>php DB example</title>
 	
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
@@ -35,8 +35,8 @@
     <div class="container pt-4">
         
         <div class="p-3">
-            <h2 class="display-4"><strong>JSON example</strong></h2>
-            <h2 class="display-6">Extract and show data on html from a JSON file</h2>
+            <h2 class="display-4"><strong>mySQL php Example</strong></h2>
+            <h2 class="display-6">Extract and show data on html from mySQL database</h2>
         </div>
 
 
